@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyShop.Core.Models
 {
-    class Product
+    public class Product
     {
         public Product()
         {
