@@ -5,7 +5,7 @@ using System.Runtime.Caching;
 
 namespace MyShop.DataAccess.InMemory
 {
-    class ProductRepository
+   public  class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products = new List<Product>();
@@ -51,6 +51,21 @@ namespace MyShop.DataAccess.InMemory
             if (productToDelete != null)
             {
                 products.Remove(productToDelete);
+            }
+            else
+            {
+                throw new System.Exception("Product no  found to Delete");
+            }
+
+        }
+
+        public Product Find(string Id)
+        {
+
+            Product productTofind = products.Find(p => p.Id == Id);
+            if (productTofind != null)
+            {
+                return productTofind;
             }
             else
             {
