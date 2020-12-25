@@ -99,6 +99,28 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj">
+      <Project>{7aba381e-2c72-4f0b-8ba6-7677e3edf57b}</Project>
+      <Name>MyShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.InMemory\MyShop.DataAccess.InMemory.csproj">
+      <Project>{2fb5af71-70b1-464c-b6c3-1453992e880f}</Project>
+      <Name>MyShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
+      <Project>{be7a597a-c9a2-4b8c-9e2e-760307bea4f8}</Project>
+      <Name>MyShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj">
+      <Project>{8510b558-cf8c-4fbf-ae4f-54d1d7696152}</Project>
+      <Name>MyShop.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.WebUI\MyShop.WebUI.csproj">
+      <Project>{e75cf341-5448-47b9-9588-704854a3aeda}</Project>
+      <Name>MyShop.WebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
