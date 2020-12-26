@@ -61,5 +61,21 @@ namespace MyShop.DataAccess.InMemory
             }
 
         }
+
+        public T Find(string Id)
+        {
+
+            T itemTofind = items.Find(p => p.Id == Id);
+            if (itemTofind != null)
+            {
+                return itemTofind;
+            }
+            else
+            {
+                throw new System.Exception("No Item  found");
+            }
+
+        }
+        
     }
 }
