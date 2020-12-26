@@ -1,7 +1,7 @@
 ﻿using MyShop.Core.Models;
 using System.Linq;
 
-namespace MyShop.DataAccess.InMemory
+namespace MyShop.Core.Contracts
 {
     public interface IRepository<T> where T : BaseEntity
     {
@@ -10,5 +10,6 @@ namespace MyShop.DataAccess.InMemory
         void Delete(string Id);
         void Insert(T t);
         void Update(T t);
+        T Find(string id);
     }
 }
