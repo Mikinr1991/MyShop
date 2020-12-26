@@ -23,13 +23,13 @@ namespace MyShop.DataAccess.SQL
 
         public void Commit()
         {
-            context.saveChanges();
+            context.SaveChanges();
         }
 
         public void Delete(string Id)
         {
             var t = Find(Id);
-            if (context.Entry(t).state == EntryState.Detached)
+            if (context.Entry(t).State == EntityState.Detached)
                 dbSet.Attach(t);
 
             dbSet.Remove(t);
@@ -37,7 +37,7 @@ namespace MyShop.DataAccess.SQL
 
         public T Find(string Id)
         {
-           return dbSet.Find(Id)
+            return dbSet.Find(Id);
         }
 
         public void Insert(T t)
@@ -48,7 +48,7 @@ namespace MyShop.DataAccess.SQL
         public void Update(T t)
         {
             dbSet.Attach(t);
-            context.Entry(t).State = BaseEntity.Modified;
+            context.Entry(t).State = EntityState.Modified;
         }
     }
 }
