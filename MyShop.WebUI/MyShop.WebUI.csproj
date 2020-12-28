@@ -189,12 +189,45 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductCategoryManagerController.cs" />
     <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280511464_Product.cs" />
+    <Compile Include="Migrations\202012280511464_Product.designer.cs">
+      <DependentUpon>202012280511464_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280513242_ProductCategory.cs" />
+    <Compile Include="Migrations\202012280513242_ProductCategory.designer.cs">
+      <DependentUpon>202012280513242_ProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280514535_Basket.cs" />
+    <Compile Include="Migrations\202012280514535_Basket.designer.cs">
+      <DependentUpon>202012280514535_Basket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280515443_BasketItem.cs" />
+    <Compile Include="Migrations\202012280515443_BasketItem.designer.cs">
+      <DependentUpon>202012280515443_BasketItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280523435_BasketItem1.cs" />
+    <Compile Include="Migrations\202012280523435_BasketItem1.designer.cs">
+      <DependentUpon>202012280523435_BasketItem1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280524269_Basket1.cs" />
+    <Compile Include="Migrations\202012280524269_Basket1.designer.cs">
+      <DependentUpon>202012280524269_Basket1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280525103_Product1.cs" />
+    <Compile Include="Migrations\202012280525103_Product1.designer.cs">
+      <DependentUpon>202012280525103_Product1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012280526116_ProductCategory1.cs" />
+    <Compile Include="Migrations\202012280526116_ProductCategory1.designer.cs">
+      <DependentUpon>202012280526116_ProductCategory1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,6 +301,8 @@
     <Content Include="Views\ProductCategoryManager\Edit.cshtml" />
     <Content Include="Views\ProductCategoryManager\Delete.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Basket\Index.cshtml" />
+    <Content Include="Views\Basket\BasketSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -304,6 +339,32 @@
       <Project>{8510b558-cf8c-4fbf-ae4f-54d1d7696152}</Project>
       <Name>MyShop.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012280511464_Product.resx">
+      <DependentUpon>202012280511464_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280513242_ProductCategory.resx">
+      <DependentUpon>202012280513242_ProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280514535_Basket.resx">
+      <DependentUpon>202012280514535_Basket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280515443_BasketItem.resx">
+      <DependentUpon>202012280515443_BasketItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280523435_BasketItem1.resx">
+      <DependentUpon>202012280523435_BasketItem1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280524269_Basket1.resx">
+      <DependentUpon>202012280524269_Basket1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280525103_Product1.resx">
+      <DependentUpon>202012280525103_Product1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012280526116_ProductCategory1.resx">
+      <DependentUpon>202012280526116_ProductCategory1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
